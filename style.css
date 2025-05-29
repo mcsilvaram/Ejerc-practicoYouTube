@@ -211,7 +211,7 @@ body, html {
 }
 
 .nav-arrow {
-  position: center;
+  /*position: center;*/
   z-index: 1;
   background-color: white;
   border: none;
