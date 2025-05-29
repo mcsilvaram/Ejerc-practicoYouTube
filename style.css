@@ -3,8 +3,7 @@
 /* =================== */
 * {
   margin: 0; 
-  padding: 0;
-  /* box-sizing: border-box; */
+  padding: 0;  
 }
 
 header {
@@ -27,6 +26,7 @@ body {
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
 }
+
 body, html {
   margin: 0;
   padding: 0;
@@ -35,9 +35,7 @@ body, html {
   overflow: hidden; /* evita scroll general del body */
 }
 
-/* =================== */
-/*     Header          */
-/* =================== */
+/* =====  Header ======= */
 
 .menu-toggle {
   background: none;
@@ -50,7 +48,6 @@ body, html {
   align-items: center;
   justify-content: center;
 }
-
 
 .logo {
   font-size: 30px;
@@ -111,17 +108,18 @@ body, html {
   gap: 15px;
 }
 
+/* ======== Carrusel ======== */
 .carousel-wrapper {
   position: relative;
-  height: 200px;
+  height: 180px;
   display: flex;
   align-items: center;
   background-color: white;
 }
 
-.nav-arrow.left {
+/*.nav-arrow.left {
   left: 140px;
-}
+}*/
 
 /*.nav-carousel {
   overflow-x: auto;
@@ -132,22 +130,10 @@ body, html {
   background-color: white;
   border-top: 20px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin: 10px 5px;
+  margin: 10px 5px;*/
 }
 
-.nav-carousel {
-  overflow-x: auto;
-  white-space: nowrap;
-  flex: 1;
-  scroll-behavior: smooth;
-  padding-top: 15px 1px;
-  background-color: white;
-  border-top: 20px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  margin: 10px 5px;
-}
-
-.nav-carousel ul {
+/*.nav-carousel ul {
   display: flex;
   gap: 20px;
   list-style: none;
@@ -185,9 +171,9 @@ body, html {
   white-space: nowrap;
   flex: 1;
   scroll-behavior: smooth;
-  padding-top: 15px 1px;
+  padding-top: 16px 1px;
   background-color: white;
-  border-top: 20px solid #ddd;
+  border-top: 25px solid #ddd;
   border-bottom: 1px solid #ddd;
   margin: 10px 5px;
 }
@@ -224,7 +210,6 @@ body, html {
   display: none;
 }
 
-
 .nav-arrow {
   position: center;
   z-index: 1;
@@ -246,17 +231,6 @@ body, html {
 .nav-arrow:hover {
   background-color: #eee;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* =================== */
 /* Barra de Búsqueda   */
