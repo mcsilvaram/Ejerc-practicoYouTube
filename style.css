@@ -7,6 +7,20 @@
   /* box-sizing: border-box; */
 }
 
+header {
+  display: flex;
+  background: white;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+}
+
 body {
   background: white;
   color: #222;
@@ -25,30 +39,6 @@ body, html {
 /*     Header          */
 /* =================== */
 
-header {
-  display: flex;
-  background: white;
-  height: 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; 
-}
-
-.logo {
-  font-size: 30px;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  height: auto;
-  display: flex;
-  align-items: center;
-}
-
 .menu-toggle {
   background: none;
   border: none;
@@ -62,10 +52,16 @@ header {
 }
 
 
+.logo {
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
 
-/* =================== */
-/* Barra de Búsqueda   */
-/* =================== */
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -83,14 +79,6 @@ header {
   background-color: white;
 }
 
-.search-bar input {
-  flex: 1;
-  border: none;
-  padding: 0 10px;
-  font-size: 14px;
-  outline: none;
-}
-
 .search-btn {
   width: 60px;
   background-color: #f1f1f1;
@@ -100,46 +88,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.micro-btn {
-  margin-left: 10px;
-  background-color: #f1f1f1;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.micro-btn .material-icons,
-.search-btn .material-icons {
-  font-size: 25px;
-  color: #555;
-}
-
-
-/* ============================ */
-/* Controles de Usuario        */
-/* ============================ */
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-}
-
-.notifications-account {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.notifications-account .material-icons {
-  font-size: 30px;
-  cursor: pointer;
 }
 
 .crear-btn {
@@ -157,43 +105,91 @@ header {
   transition: background-color 0.2s;
 }
 
-.crear-btn:hover {
-  background-color: #e6e6e6;
+.notifications-account {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.crear-btn span {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.crear-btn p {
-  margin: 0;
-  font-size: 14px;
-}
-
-
-/* ============================ */
-/* Carrusel de Navegación      */
-/* ============================ */
 .carousel-wrapper {
   position: relative;
   height: 200px;
   display: flex;
-
   align-items: center;
   background-color: white;
 }
 
-.nav-carousel {
-  /*overflow-x: auto;*/
+.nav-arrow.left {
+  left: 140px;
+}
+
+/*.nav-carousel {
+  overflow-x: auto;
   white-space: nowrap;
-  /*flex: 1;*/
+  flex: 1;
   scroll-behavior: smooth;
   padding-top: 15px 1px;
   background-color: white;
-  /*border-top: 20px solid #ddd;
+  border-top: 20px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin: 10px 5px;*/
+  margin: 10px 5px;
+}
+
+.nav-carousel {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex: 1;
+  scroll-behavior: smooth;
+  padding-top: 15px 1px;
+  background-color: white;
+  border-top: 20px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 5px;
+}
+
+.nav-carousel ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 30px;
+}
+
+.nav-carousel li {
+  display: inline-block;
+}
+
+.nav-carousel a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #f1f1f1;
+  color: #000;
+  border-radius: 16px;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-carousel a:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-carousel::-webkit-scrollbar {
+  display: none;
+}*/
+
+
+.nav-carousel {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex: 1;
+  scroll-behavior: smooth;
+  padding-top: 15px 1px;
+  background-color: white;
+  border-top: 20px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 5px;
 }
 
 .nav-carousel ul {
@@ -243,10 +239,6 @@ header {
   transition: background-color 0.2s;
 }
 
-.nav-arrow.left {
-  left: 140px;
-}
-
 .nav-arrow.right {
   right: 140px;
 }
@@ -254,6 +246,89 @@ header {
 .nav-arrow:hover {
   background-color: #eee;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================== */
+/* Barra de Búsqueda   */
+/* =================== */
+
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+
+.micro-btn {
+  margin-left: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.micro-btn .material-icons,
+.search-btn .material-icons {
+  font-size: 25px;
+  color: #555;
+}
+
+
+/* ============================ */
+/* Controles de Usuario        */
+/* ============================ */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+
+.notifications-account .material-icons {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+
+.crear-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.crear-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.crear-btn p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* ============================ */
+/* Carrusel de Navegación      */
+/* ============================ */
+
+
 
 
 /* =================== */
