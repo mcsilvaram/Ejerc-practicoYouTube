@@ -34,7 +34,7 @@
   <!------------------------------>        
 
   <div class="carousel-wrapper">
-    <button class="nav-arrow left" onclick="scrollNav(-200)">&#10094;</button>
+  <button class="nav-arrow left" onclick="scrollNav(-200)">&#10094;</button>
     <nav class="nav-carousel" id="navCarousel">
       <ul>
         <li><a href="#todo">Todo</a></li>
@@ -52,237 +52,91 @@
         <li><a href="#dramacoreano">Drama coreano</a></li>
       </ul>
     </nav>
-    <button class="nav-arrow right" onclick="scrollNav(200)">&#10095;</button>
-    <script>
-        function scrollNav(scrollAmount) {
-            const container = document.getElementById("navCarousel");
-            container.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-            });
-        }
-    </script>
-  </div>
+  <button class="nav-arrow right" onclick="scrollNav(200)">&#10095;</button>
+ </div>
+  <script>
+    function scrollNav(distance) {
+      const carousel = document.getElementById('navCarousel');
+      carousel.scrollBy({ left: distance, behavior: 'smooth' });
+    }
+  </script>
 
 
   <!------------------------------>
   <!--       Menu lateral       -->
   <!------------------------------>
 
-  <main class="container">
-      <aside class="sidebar">
-        <ul class="sidebar-section">
-            <button class="material-icons"><span class="material-icons">mic</span></button>
-            <li><span class="material-icons">home</span><span>Inicio</span></li>
-            <li><span class="material-icons">play_arrow</span><span>Shorts</span></li>
-            <li><span class="material-icons">subscriptions</span><span>Suscripciones</span></li>
-            <li><span class="material-icons">subscriptions</span><span>Tu</span></li>
-        </ul>
-
-        <!-- <h3 class="sidebar-title">Tú</h3> */
-        <ul class="sidebar-section collapsible">
-            <li><span class="material-icons">history</span><span>Historial</span></li>
-            <li><span class="material-icons">playlist_play</span><span>Listas de reproducción</span></li>
-            <li><span class="material-icons">slideshow</span><span>Mis videos</span></li>
-            <li><span class="material-icons">watch_later</span><span>Ver más tarde</span></li>
-            <li><span class="material-icons">thumb_up</span><span>Videos que me gustan</span></li>
-        </ul>
-
-        /* <h3 class="sidebar-title">Suscripciones</h3>
-        /* <ul class="sidebar-section">
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj1T1gGDnW4Kn.jpg" class="channel-icon"><span>Telemundo</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj2T2gCNN.jpg" class="channel-icon"><span>CNN en Español</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj3T3gNTN.jpg" class="channel-icon"><span>NTN24</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj4T4gLAS.jpg" class="channel-icon"><span>Las Estrellas</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj5T5gRCN.jpg" class="channel-icon"><span>Canal RCN</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj6T6gLAN.jpg" class="channel-icon"><span>LA NACION</span></li>
-            <li><img src="https://yt3.ggpht.com/ytc/AAUvwnj7T7gVPT.jpg" class="channel-icon"><span>VPItv</span></li>
-        </ul> */-->
-      </aside>
-     <section class="main-content">      
-            <div class="video-grid">
-                <div class="video-card">
-                    <img src="https://i.ytimg.com/vi/6ozKFAuGSZg/hqdefault.jpg" class="thumbnail" alt="Miniatura del video">
-                    <div class="video-info">
-                        <div class="channel-info">
-                                <img src="https://yt3.ggpht.com/0SlAKytXkwUjePrzYHSl3UjeYwzpGBbY9q-8VuHHYH2_zrRVwYIxc0AWEywB2ecy1KrQjdEv=s68-c-k-c0x00ffffff-no-rj"
-                                class="subscriber-logo" alt="Logo del canal">
-                                <div class="text-info">
-                                    <h3 style="font-weight: bold; font-size: 16px;">
-                                    #EnVivo | Chic al Día con #GabrielaVergara y #TeacherSalandy
-                                    </h3>
-                                    <p>EVTV MIAMI</p>
-                                    <p>31K visualizaciones . hace 5 horas</p>
-                                </div>
-                        </div>
-                        <span class="live">EN DIRECTO</span>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <img src="https://i.ytimg.com/vi/tuoe5lVVC9s/hqdefault.jpg" class="thumbnail" alt="Miniatura del video">
-                    <div class="video-info">
-                        <div class="channel-info">
-                            <img src="https://yt3.ggpht.com/Nmmjyjg_haweMTgH27iza810trmWay24hZosL8UhE29fGkDn6yPqUlnSjeuyos5JMK2H-MiVFg=s68-c-k-c0x00ffffff-no-rj"
-                            class="subscriber-logo" alt="Logo del canal">
-                            <div class="text-info">
-                                <h3 style="font-weight: bold; font-size: 16px;">
-                                900 drones rusos sobre Ucrania: Trump pasa de felicitar a Putin a decir que se volvió loco
-                                </h3>
-                                <p>Univision Noticias</p>
-                                <p>138K visualizaciones . hace 23 horas</p>
-                            </div>
-                        </div>
-                        <span class="live">ESTRENO</span>
-                    </div>
-                </div>
-            
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/r6flaqDxbB8/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/C_0vuxe4eptx7vdmcEeNriK5hLt1DTIVJbZv2X6GCq4u5BMoQ-BgglxmM7wbkUDrGJKUD9t6nA=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        LA EPICA historia de Juan Pablo GUANIPA
-                        </h3>
-                        <p>Casto Ocando</p>
-                        <p>132K visualizaciones . hace 21 horas</p>
-                    </div>
-                    </div>
-                    <span class="live">ESTRENO</span>
-                </div>
-                </div>
-
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/H-DL2Rzchvg/hqdefault.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lHjSaebUMZ8BTjACwXJR6oMRmCIai1n73Eu9eM0-vhutai=s160-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        La esposa de MACRON ROMPIO LA INTERNET (Y la credibilidad de su esposo)
-                        </h3>
-                        <p>John Acquaviva</p>
-                        <p>72K visualizaciones . hace 21 horas</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>
-
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/AkclYj_wv24/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/62I79vdmIb9RKfb8WfDWmGRDLAIDpTm5zafzLpKGKEQZo26iAHgUDtRox1IojV6JCBqTm6pMyg=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        Ballerina - Trailer 2 (2025) Ana de Armas, Keanu Reeves (4K)
-                        </h3>
-                        <p>Screen Culture</p>
-                        <p>637K visualizaciones . hace 5 meses</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>
-
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/PyeKwHkatGA/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/a2HPfXffTA04LSoJgcLaoFEiBTGtGJZY6ix4ShuU7P8qD6DmGDrDn5kEr0mXSNH10SOvmQ-4cmw=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        Shisui esta embarazada? - Los diarios de la boticaria spoiler temporada 2
-                        </h3>
-                        <p>MissDramas</p>
-                        <p>105K visualizaciones . hace 21 minutos</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>  
-
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/PyeKwHkatGA/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/a2HPfXffTA04LSoJgcLaoFEiBTGtGJZY6ix4ShuU7P8qD6DmGDrDn5kEr0mXSNH10SOvmQ-4cmw=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        Shisui esta embarazada? - Los diarios de la boticaria spoiler temporada 2
-                        </h3>
-                        <p>MissDramas</p>
-                        <p>105K visualizaciones . hace 21 minutos</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>  
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/PyeKwHkatGA/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/a2HPfXffTA04LSoJgcLaoFEiBTGtGJZY6ix4ShuU7P8qD6DmGDrDn5kEr0mXSNH10SOvmQ-4cmw=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        Shisui esta embarazada? - Los diarios de la boticaria spoiler temporada 2
-                        </h3>
-                        <p>MissDramas</p>
-                        <p>105K visualizaciones . hace 21 minutos</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>
-                
-                <div class="video-card">
-                <img src="https://i.ytimg.com/vi/PyeKwHkatGA/hq720.jpg" class="thumbnail" alt="Miniatura del video">
-
-                <div class="video-info">
-                    <div class="channel-info">
-                    <img src="https://yt3.ggpht.com/a2HPfXffTA04LSoJgcLaoFEiBTGtGJZY6ix4ShuU7P8qD6DmGDrDn5kEr0mXSNH10SOvmQ-4cmw=s68-c-k-c0x00ffffff-no-rj"
-                        class="subscriber-logo" alt="Logo del canal">
-                    <div class="text-info">
-                        <h3 style="font-weight: bold; font-size: 16px;">
-                        Shisui esta embarazada? - Los diarios de la boticaria spoiler temporada 2
-                        </h3>
-                        <p>MissDramas</p>
-                        <p>105K visualizaciones . hace 21 minutos</p>
-                    </div>
-                    </div>
-                    <span class="live"></span>
-                </div>
-                </div>  
-        </section>
-            <!-- Script -->
-            <script>
-                document.querySelectorAll('.sidebar-title.toggle').forEach(title => {
-                title.addEventListener('click', () => {
-                    const next = title.nextElementSibling;
-                    if (next.classList.contains('collapsible')) {
-                    next.style.display = next.style.display === 'none' ? 'block' : 'none';
-                    }
-                });
-                });
-            </script>
+  <!-- Contenido principal -->
+  <div class="container">
+    <aside>
+      <ul>
+        <li><span class="material-icons">home</span><span>Inicio</span></li>
+        <li><span class="material-icons">play_arrow</span><span>Shorts</span></li>
+        <li><span class="material-icons">subscriptions</span><span>Suscripciones</span></li>
+        <li><span class="material-icons">person</span><span>Tú</span></li>
+      </ul>
+    </aside>
+<!------------------------------>
+<!--       Menu de video       -->
+<!------------------------------>
+    <main>
+      <div class="video-grid">
+        <div class="video-card">
+          <img src="https://i.ytimg.com/vi/6ozKFAuGSZg/hqdefault.jpg" class="thumbnail" alt="Miniatura del video">
+          <div class="video-info">
+            <div class="channel-info">
+              <img src="https://yt3.ggpht.com/0SlAKytXkwUjePrzYHSl3UjeYwzpGBbY9q-8VuHHYH2_zrRVwYIxc0AWEywB2ecy1KrQjdEv=s68-c-k-c0x00ffffff-no-rj"
+                  class="subscriber-logo" alt="Logo del canal">
+              <div class="text-info">
+                <h3 style="font-weight: bold; font-size: 16px;">
+                  #EnVivo | Chic al Día con #GabrielaVergara y #TeacherSalandy
+                </h3>
+                <p>EVTV MIAMI</p>
+                <p>31K visualizaciones . hace 5 horas</p>
+              </div>
+            </div>
+            <span class="live">EN DIRECTO</span>
+          </div>
         </div>
-      </div>   
-    </main>
-  </div>  
- </body>
+
+        <div class="video-card">
+          <img src="https://i.ytimg.com/vi/tuoe5lVVC9s/hqdefault.jpg" class="thumbnail" alt="Miniatura del video">
+          <div class="video-info">
+            <div class="channel-info">
+              <img src="https://yt3.ggpht.com/Nmmjyjg_haweMTgH27iza810trmWay24hZosL8UhE29fGkDn6yPqUlnSjeuyos5JMK2H-MiVFg=s68-c-k-c0x00ffffff-no-rj"
+                  class="subscriber-logo" alt="Logo del canal">
+              <div class="text-info">
+                <h3 style="font-weight: bold; font-size: 16px;">
+                  900 drones rusos sobre Ucrania: Trump pasa de felicitar a Putin a decir que se volvió loco
+                </h3>
+                <p>Univision Noticias</p>
+                <p>138K visualizaciones . hace 23 horas</p>
+              </div>
+            </div>
+            <span class="live">ESTRENO</span>
+          </div>
+        </div>
+      
+        <div class="video-card">
+          <img src="https://i.ytimg.com/vi/r6flaqDxbB8/hq720.jpg" class="thumbnail" alt="Miniatura del video">
+
+          <div class="video-info">
+            <div class="channel-info">
+              <img src="https://yt3.ggpht.com/C_0vuxe4eptx7vdmcEeNriK5hLt1DTIVJbZv2X6GCq4u5BMoQ-BgglxmM7wbkUDrGJKUD9t6nA=s68-c-k-c0x00ffffff-no-rj"
+                  class="subscriber-logo" alt="Logo del canal">
+              <div class="text-info">
+                 <h3 style="font-weight: bold; font-size: 16px;">
+                  LA EPICA historia de Juan Pablo GUANIPA
+                </h3>
+                <p>Casto Ocando</p>
+                <p>132K visualizaciones . hace 21 horas</p>
+              </div>
+            </div>
+            <span class="live">ESTRENO</span>
+          </div>
+        </div>
+    </main>    
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
 </html>
