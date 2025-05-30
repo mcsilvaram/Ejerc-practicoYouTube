@@ -390,7 +390,7 @@ main h2 {
   gap: 24px;
   padding: 16px 0;
 
-  /* ✅ Scroll vertical interno */
+  ✅ Scroll vertical interno */
   max-height: 600px; /* o la altura que necesites */
   overflow-y: auto;
 
@@ -421,14 +421,11 @@ main h2 {
   display: block;
 }
 
-/* ✅ Logo del canal */
 .subscriber-logo {
-  width: 36px;
-  height: 36px;
+  display: grid;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
-  flex-shrink: 0;
 }
 
 .video-info {
@@ -465,48 +462,3 @@ main h2 {
   padding: 2px 8px;
   border-radius: 4px;
 }
-/*.video-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
-}
-
-.video-card:hover {
-  transform: translateY(-4px);
-}
-
-.video-card img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-}
-
-.video-card h3 {
-  margin: 8px 12px 4px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.video-card p {
-  margin: 0 12px 6px;
-  font-size: 12px;
-  border-radius: 50%;
-  font-weight: 300;
-  color: #666;
-}*/
-
-/*.video-card .live {
-  margin: 0 12px 12px;
-  font-size: 12px;
-  color: #fff;
-  background: #cc0000;
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-}*/
