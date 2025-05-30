@@ -108,16 +108,46 @@ body, html {
   gap: 15px;
 }
 
+/* Barra de Búsqueda   */
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.micro-btn {
+  margin-left: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.micro-btn .material-icons,
+.search-btn .material-icons {
+  font-size: 25px;
+  color: #555;
+}
+
+/*--------------------------- */
 /* ======== Carrusel ======== */
+/* -------------------------- */
 
 .carousel-wrapper {
+  width: 70%;
+  margin: 0 auto; /* Centrado horizontal */
   position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   background-color: white;
-  width: 70%;
-  margin-left: auto;
 }
 
 .nav-carousel {
@@ -142,23 +172,18 @@ body, html {
 
 .nav-carousel li {
   display: inline-block;
-
 }
 
 .nav-carousel a {
-  display: inline-block;
-  padding: 6px 12px;
+  display: inline-block;  
+  padding: 4px 10px;   /* Más pequeño */
+  font-size: 14px;
   background-color: #f1f1f1;
   color: #000;
-  border-radius: 16px; /* o lo que desees */
-  font-size: 14px;
+  border-radius: 10px;
   text-decoration: none;
   white-space: nowrap;
 }
-
-/*.nav-carousel a:hover {
-  background-color: #e0e0e0;
-}*/
 
 .nav-carousel::-webkit-scrollbar {
   display: none;
@@ -177,51 +202,84 @@ body, html {
   transform: translateY(-50%);
 }
 
-.nav-arrow.right {
+.nav-arrow.left {
   left: 15px;
 }
-
-/* =================== */
-/* Barra de Búsqueda   */
-/* =================== */
-
-
-.search-bar input {
-  flex: 1;
-  border: none;
-  padding: 0 10px;
-  font-size: 14px;
-  outline: none;
-}
-
-
-.micro-btn {
-  margin-left: 10px;
-  background-color: #f1f1f1;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.micro-btn .material-icons,
-.search-btn .material-icons {
-  font-size: 25px;
-  color: #555;
+ .nav-arrow.right {
+  right: 15px;
 }
 
 
 /* ============================ */
 /* Controles de Usuario        */
 /* ============================ */
+
+.container {
+  display: flex;
+ /*height: calc(100vh - 65px); /* resta el header */
+  margin-top: 80px; /* espacio para el header fijo */
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+
 .user-actions {
   display: flex;
   align-items: center;
   gap: 150px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #666;
+  font-family: 'Roboto', sans-serif;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 10px 0;
+  height: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.sidebar-section {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #606060;
+  padding: 10px 20px 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.sidebar-section li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar-section li:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar-section span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.menu-section li span.material-icons {
+  margin-right: 12px;
+  color: #606060;
 }
 
 
@@ -248,13 +306,6 @@ body, html {
 /* Layout Principal    */
 /* =================== */
 
-.container {
-  display: flex;
- /*height: calc(100vh - 65px); /* resta el header */
-  margin-top: 80px; /* espacio para el header fijo */
-  overflow: hidden;
-  margin-bottom: 2px;
-}
 
 .collapsible {
   transition: all 0.3s ease;
@@ -264,27 +315,6 @@ body, html {
 /* Aside (Sidebar)     */
 /* =================== */
 
-.sidebar {
-  width: 250px;
-  background-color: #666;
-  font-family: 'Roboto', sans-serif;
-  border-right: 1px solid #ddd;
-  overflow-y: auto;
-  padding: 10px 0;
-  height: 100%;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px;
-}
-
-.sidebar-section {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
 .sidebar-title {
   font-size: 14px;
