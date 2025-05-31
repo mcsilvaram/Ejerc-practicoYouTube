@@ -260,7 +260,7 @@ aside li {
   transition: transform 0.2s;
 }
 
-.element.style {
+.element-style {
   font-weight: bold;
   font-size: 15px;
 }
