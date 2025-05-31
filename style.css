@@ -3,32 +3,37 @@
 /* =================== */
 * {
   margin: 0; 
-  padding: 0;  
+  padding: 0;
 }
 
 body {
   background: white;
-  color: #222;
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
 }
-
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 40px;
+  padding: 15px 20px;
   background: white;
   height: 60px;
 }
 
+.menu-toggle {
+  background: white;
+  border-color: white;
+  color:#555; 
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-size: 30px;        /* Tamaño más pequeño del texto */
-  padding: 80px;
+  padding: 40px;
   margin: 10px;
   width: 200px;
-  height: auto;
   display: flex;
   align-items: center;
 }
@@ -69,6 +74,12 @@ header {
   justify-content: center;
 }
 
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
 .micro-btn {
   margin-left: 10px;
   background-color: #f1f1f1;
@@ -82,29 +93,10 @@ header {
   cursor: pointer;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  background: white;
-}
-
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-}
-
-.notifications-account {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.notifications-account .material-icons {
-  font-size: 25px;
-  cursor: pointer;
+.micro-btn .material-icons,
+.search-btn .material-icons {
+  font-size: 20px;
+  color: #555;
 }
 
 .crear-btn {
@@ -112,7 +104,7 @@ header {
   align-items: center;
   gap: 6px;
   background-color: #f1f1f1;
-  color: #000;
+  /*color: #000;*/
   border: none;
   border-radius: 30px;
   padding: 6px 18px;
@@ -136,10 +128,10 @@ header {
   font-size: 14px;
 }
 
-.micro-btn .material-icons,
-.search-btn .material-icons {
-  font-size: 20px;
-  color: #555;
+.notifications-account {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 /************************************/
@@ -150,7 +142,6 @@ header {
   display: flex;
   align-items: center;
   background-color: white;
-  /*border-bottom: 1px solid #ddd; */
 }
 
 .nav-carousel {
@@ -184,11 +175,6 @@ header {
   white-space: nowrap;
 }
 
-.nav-carousel a:hover {
-  background-color: black;
-  color: white;
-}
-
 .nav-arrow {
   position: absolute;
   z-index: 1;
@@ -197,9 +183,6 @@ header {
   font-size: 15px;
   padding: 3px 10px;
   cursor: pointer;
-  color: #555;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  border-radius: 5px;
   transition: background-color 0.2s;
 }
 
@@ -209,136 +192,12 @@ header {
 
 .nav-arrow.right {
   right: 140px;
-}
-
-.nav-arrow:hover {
-  background-color: #eee;
-}
-
-.user-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/*ontainer {
-  display: flex;
-  margin-bottom: 2px;
-}
-
-aside {
-  width: 90px; /* o el ancho que uses */
-  background-color: white;
-  padding-top: 2px;
-}
-
-/*ide ul {
-  list-style: none;
-  padding: 15px;
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra todo el contenido dentro del aside */
-}
-
-/*ide li {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra ícono y texto en vertical */
-/*justify-content: center;
-  margin: 10px 10px;
-  font-size: 12px;
-  text-align: center;
-  cursor: pointer;
-}
-
-aside li .material-icons {
-  font-size: 30px;
-  margin-bottom: 4px;
 }
 
 /******************************/
 /*** menu lateral *************/
 /******************************/
-.carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  /*border-bottom: 1px solid #ddd; */
-}
 
-.nav-carousel {
-  overflow-x: auto;
-  white-space: nowrap;
-  flex: 1;
-  scroll-behavior: smooth;
-  padding: 5px 0;
-  margin: 3px 180px; /* deja espacio para las flechas */
-}
-
-.nav-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.nav-carousel ul {
-  display: flex;
-  gap: 5px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav-carousel a {
-  padding: 5px 15px;
-  background-color: #f1f1f1;
-  color: #000;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.nav-carousel a:hover {
-  background-color: black;
-  color: white;
-}
-
-.nav-arrow {
-  position: absolute;
-  z-index: 1;
-  background-color: white;
-  border: none;
-  font-size: 15px;
-  padding: 3px 10px;
-  cursor: pointer;
-  color: #555;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  border-radius: 5px;
-  transition: background-color 0.2s;
-}
-
-.nav-arrow.left {
-  left: 140px;
-}
-
-.nav-arrow.right {
-  right: 140px;
-}
-
-.nav-arrow:hover {
-  background-color: #eee;
-}
-
-.user-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/*******************************/
-/***   Menu de videos   ********/
-/*******************************/
 .container {
   display: flex;
   margin-bottom: 2px;
@@ -370,31 +229,23 @@ aside li {
   cursor: pointer;
 }
 
-aside li .material-icons {
-  font-size: 30px;
-  margin-bottom: 4px;
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
 }
-
-main {
-  flex: 1;
-  padding: 20px;
-}
-
-main h2 {
-  margin-bottom: 20px;
-}
+/*******************************/
+/***   Menu de videos   ********/
+/*******************************/
 
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   padding: 16px 0;
-
-  ✅ Scroll vertical interno */
   max-height: 600px; /* o la altura que necesites */
   overflow-y: auto;
-
-  /* Opcional: solo si quieres que tenga un borde visible o destaque */
   border: 1px solid #ccc;
   padding-right: 10px; /* para que no se tape el scroll */
 }
@@ -409,11 +260,10 @@ main h2 {
   transition: transform 0.2s;
 }
 
-.video-card:hover {
-  transform: translateY(-4px);
+.element.style {
+  font-weight: bold;
+  font-size: 15px;
 }
-
-/* ✅ Miniatura del video */
 .thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -421,44 +271,36 @@ main h2 {
   display: block;
 }
 
-.subscriber-logo {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 .video-info {
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
+  padding: 10px 5px;
 }
 
-.channel-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
-.text-info h3 {
-  font-size: 14px;
-  margin: 0;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.text-info p {
-  margin: 2px 0 0;
-  font-size: 12px;
-  color: #606060;
+.video-card:hover {
+  transform: translateY(-4px);
 }
 
 .video-card .live {
   margin: 0 12px 12px;
   font-size: 12px;
   color: #fff;
-  background: #cc0000;
   display: inline-block;
   padding: 2px 8px;
   border-radius: 4px;
 }
+
+.channel-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: initial;
+  padding: 6px 6px;
+}
+
+.subscriber-logo {
+  display: flex;
+  margin-right: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
