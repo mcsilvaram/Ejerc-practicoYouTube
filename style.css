@@ -2,6 +2,7 @@
 /* Estilos Generales   */
 /* =================== */
 * {
+  box-sizing: border-box;
   margin: 0; 
   padding: 0;
 }
@@ -260,10 +261,6 @@ aside li {
   transition: transform 0.2s;
 }
 
-.element-style {
-  font-weight: bold;
-  font-size: 15px;
-}
 .thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -303,4 +300,180 @@ aside li {
   border-radius: 50%;
 }
 
+/* VIDEO GRID RESPONSIVO */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Ajustes del header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 16px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.user-actions,
+.notifications-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* VIDEO CARD */
+.video-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+}
+
+.channel-info {
+  display: flex;
+  padding: 10px;
+}
+
+.subscriber-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text-info h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.text-info p {
+  font-size: 12px;
+  color: #555;
+}
+
+/* CARRUSEL RESPONSIVO */
+.carousel-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  background: #fff;
+}
+
+.nav-carousel ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.nav-carousel a {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.nav-arrow {
+  display: none; /* ocultamos en móviles */
+}
+
+/* Layout principal */
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* MENU LATERAL DESAPARECE EN MÓVIL */
+aside {
+  display: none;
+}
+
+/* MEDIA QUERIES PARA MOVILES */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-btn span,
+  .micro-btn span,
+  .crear-btn p,
+  .notifications-account span {
+    font-size: 20px;
+  }
+
+  .text-info h3 {
+    font-size: 13px;
+  }
+
+  .text-info p {
+    font-size: 11px;
+  }
+}
 
