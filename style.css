@@ -1,7 +1,13 @@
-/* =================== */
+//* =================== */
 /* Estilos Generales   */
 /* =================== */
 * {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+{
   box-sizing: border-box;
   margin: 0; 
   padding: 0;
@@ -24,16 +30,17 @@ body {
   }
 }
 
+/* =================== */
+/*     Header          */
+/* =================== */
+
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  height: 60px;
 }
 
 .menu-toggle {
@@ -43,29 +50,28 @@ header {
   display: flex;
   align-items: center;
 }
-
-.logo {
-  font-size: 30px;        /* Tamaño más pequeño del texto */
-  padding: 10px;
-  margin: 10px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-}
-
 .search-wrapper {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1;7
   justify-content: center;
+}
+
+.logo {
+  font-size: 30px;        /* Tamaño más pequeño del texto */
+  padding: 40px;
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar {
   display: flex;
-  width: 680px;
-  height: 45px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  width: 630px;
+  height: 40px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 40px;
   overflow: hidden;
   background-color: white;
 }
@@ -92,7 +98,7 @@ header {
 .user-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 150px;
 }
 
 .micro-btn {
@@ -108,32 +114,32 @@ header {
   cursor: pointer;
 }
 
-.micro-btn .material-icons,
-.search-btn .material-icons {
-  font-size: 20px;
-  color: #555;
-}
-
 .crear-btn {
   display: flex;
   align-items: center;
   gap: 6px;
   background-color: #f1f1f1;
+  /*color: #000;*/
   border: none;
   border-radius: 30px;
-  padding: 20px 25px;
-  margin-left: 25px;
+  padding: 6px 18px;
   font-size: 14px;
   cursor: pointer;
   height: 36px;
   transition: background-color 0.2s;
 }
 
+.micro-btn .material-icons,
+.search-btn .material-icons {
+  font-size: 20px;
+  color: #555;
+}
+
 .crear-btn:hover {
   background-color: #e6e6e6;
 }
 
-.crear-btn span {
+/*.crear-btn span {
   font-size: 18px;
   line-height: 1;
 }
@@ -141,7 +147,7 @@ header {
 .crear-btn p {
   margin: 0;
   font-size: 14px;
-}
+}*/
 
 .notifications-account {
   display: flex;
@@ -213,18 +219,22 @@ header {
 /*** menu lateral *************/
 /******************************/
 
-.container {
-  display: flex;
-  margin-bottom: 2px;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
 aside {
   width: 90px; /* o el ancho que uses */
   background-color: white;
   padding-top: 2px;
+}
+
+.sidebar {
+  /width: 240px;*/
+  height: 100vh;            /* Ocupa toda la altura de la ventana */
+  overflow-y: auto;         /* Permite scroll vertical */
+  background-color: #fff;
+  position: fixed;          /* Fijado al lado izquierdo */
+  top: 65px;                /* Si tienes un header fijo, ajusta este valor */
+  left: 0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 aside ul {
@@ -242,7 +252,7 @@ aside li {
   align-items: center; /* Centra ícono y texto en vertical */
   justify-content: center;
   margin: 10px 10px;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   cursor: pointer;
 }
@@ -251,133 +261,87 @@ aside li {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;
-}
-/*******************************/
-/***   Menu de videos   ********/
-/*******************************/
-
-/*.video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    font-size: 30px;
 }
 
-.video-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/******************************/
+/*** Videos de contenido  *****/
+/******************************/
+/*.container {
   display: flex;
-  flex: 1 1 calc(100% - 32px);
-  transition: transform 0.2s;
+  margin-left: 240px; /* deja espacio para el sidebar 
+  margin-top: 80px; /* si hay header 
+  overflow: hidden;
 }*/
+
+/*.container {
+  display: flex;
+ height: calc(100vh - 65px); /* resta el header 
+  margin-top: 80px; /* espacio para el header fijo 
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+/*.container {
+  display: flex;
+  margin-bottom: 2px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}*/
+
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9f9f9;
+}
+
 .video-grid {
   display: flex;
   flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 16px 0;
-  max-height: 600px; /* o la altura que necesites */
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding-right: 10px; /* para que no se tape el scroll */
+  gap: 20px;
 }
 
 .video-card {
- /* background: #fff;*/
-  border-radius: 12px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex: 1 1 calc(100% - 32px);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-
-
-@media (min-width: 600px) {
-  .video-card {
-    flex: 1 1 calc(33.33% - 32px);
-    max-width: calc(33.33% -32px);
-  }
-}
-
-@media (min-width: 1000px) {
-  .video-card {
-    flex: 1 1 calc(25% - 32px);
-    max-width: calc(25% - 32px);
-  }
-}
-
 
 .thumbnail {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+  height: auto;
 }
 
 .video-info {
-  /*padding: 10px;
-  display: flex;
-  flex-direction: columns;
-  gap: 6px;*/
-  padding: 10px 5px;
+  padding: 10px;
 }
 
-
-.video-card:hover {
-  transform: translateY(-4px);
-}
-
-.video-card .live {
-  margin: 0 12px 12px;
-  font-size: 12px;
-  color: #fff;
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
-/*.channel-info {
+.channel-info {
   display: flex;
   gap: 10px;
-  *align-items: flex-start;
-  flex-direction: initial;
-  padding: 6px 6px;
-}*/
+  align-items: center;
+}
 
 .subscriber-logo {
-  display: flex;
-  margin-right: 2px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.text-info h3 {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 4px;
-  line-height: 1.3;
+.text-info {
+  flex: 1;
 }
 
-.text-info p {
-  font-size: 12px;
-  color: #606060;
-  margin: 1px 0;
-}
 
-/*.live {
-  color: red;
-  font-weight: bold;
-  font-size: 12px;
-  margin-top: 5px;
-}*/
 
-.videos-wrapper {
-  /*flex: 1;*/
-  padding: 0 16px;
-}
+
+
 
