@@ -9,7 +9,7 @@
 
 *{
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0; 
   padding: 0;
 }
@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
   /*Estilos bases para moviles*/
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
@@ -210,9 +210,9 @@ header {
 /******************************/
 
 aside {
-  width: 90px; /* o el ancho que uses */
+  width: 10%; /* o el ancho que uses */
   background-color: white;
-  padding-top: 2px;
+  padding-top: 2%;
 }
 
 .sidebar {
@@ -230,7 +230,7 @@ aside {
 aside ul {
   list-style: none;
   padding: 15px;
-  margin: 8px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra todo el contenido dentro del aside */
@@ -279,11 +279,13 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: auto; /* o el ancho de tu sidebar */
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding: 30px;
 }
 
 .video-card {
+  /*width: 100%;*/
+  height: 100%;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
@@ -297,7 +299,7 @@ main {
 
 .thumbnail {
   width: 100%;
-  height: auto;
+  height: 55%;
   display: block;
 }
 
