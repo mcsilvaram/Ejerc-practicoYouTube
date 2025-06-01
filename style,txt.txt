@@ -1,0 +1,339 @@
+/* =================== */
+/* Estilos Generales   */
+/* =================== */
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  background: white;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  /*Estilos bases para moviles*/
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes para tablets y dispositivos más grandes */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* =================== */
+/*     Header          */
+/* =================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  height: 60px;
+}
+
+.menu-toggle {
+  background: white;
+  border-color: white;
+  color:#555; 
+  display: flex;
+  align-items: center;
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 30px;        /* Tamaño más pequeño del texto */
+  padding: 40px;
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  width: 630px;
+  height: 40px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-btn {
+  width: 60px;
+  background-color: #f1f1f1;
+  border: none;
+  border-left: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.micro-btn {
+  margin-left: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.crear-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f1f1;
+  /*color: #000;*/
+  border: none;
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 36px;
+  transition: background-color 0.2s;
+}
+
+.micro-btn .material-icons,
+.search-btn .material-icons {
+  font-size: 20px;
+  color: #555;
+}
+
+.crear-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.notifications-account {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/************************************/
+/******** Carrusel Menu *************/
+/************************************/
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.nav-carousel {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex: 1;
+  scroll-behavior: smooth;
+  padding: 5px 0;
+  margin: 3px 180px; /* deja espacio para las flechas */
+}
+
+.nav-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-carousel ul {
+  display: flex;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-carousel a {
+  padding: 5px 15px;
+  background-color: #f1f1f1;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-arrow {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-arrow.left {
+  left: 140px;
+}
+
+.nav-arrow.right {
+  right: 140px;
+}
+
+/******************************/
+/*** menu lateral *************/
+/******************************/
+
+aside {
+  width: 90px; /* o el ancho que uses */
+  background-color: white;
+  padding-top: 2px;
+}
+
+.sidebar {
+  /*width: 240px;*/
+  height: 100vh;            /* Ocupa toda la altura de la ventana */
+  overflow-y: auto;         /* Permite scroll vertical */
+  background-color: #fff;
+  position: fixed;          /* Fijado al lado izquierdo */
+  top: 65px;                /* Si tienes un header fijo, ajusta este valor */
+  left: 0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+aside ul {
+  list-style: none;
+  padding: 15px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra todo el contenido dentro del aside */
+}
+
+aside li {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra ícono y texto en vertical */
+  justify-content: center;
+  margin: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/******************************/
+/*** Videos de contenido  *****/
+/******************************/
+.container {
+  display: flex;
+}
+
+main {
+  flex: 1;
+  margin-left: 90px; /* ancho de tu aside */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9f9f9;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-left: 100px; /* o el ancho de tu sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-info {
+  padding: 10px;
+}
+
+.channel-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.subscriber-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.text-info h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.text-info p {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.live {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
