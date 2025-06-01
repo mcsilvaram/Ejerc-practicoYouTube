@@ -1,4 +1,4 @@
-//* =================== */
+/* =================== */
 /* Estilos Generales   */
 /* =================== */
 * {
@@ -7,8 +7,9 @@
   box-sizing: border-box;
 }
 
-{
+*{
   box-sizing: border-box;
+  font-size: 15px;
   margin: 0; 
   padding: 0;
 }
@@ -53,7 +54,7 @@ header {
 .search-wrapper {
   display: flex;
   align-items: center;
-  flex: 1;7
+  flex: 1;
   justify-content: center;
 }
 
@@ -68,7 +69,7 @@ header {
 
 .search-bar {
   display: flex;
-  width: 630px;
+  width: 650px;
   height: 40px;
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 40px;
@@ -119,13 +120,12 @@ header {
   align-items: center;
   gap: 6px;
   background-color: #f1f1f1;
-  /*color: #000;*/
   border: none;
   border-radius: 30px;
-  padding: 6px 18px;
+  padding: 10px 15px;
   font-size: 14px;
   cursor: pointer;
-  height: 36px;
+  height: 35px;
   transition: background-color 0.2s;
 }
 
@@ -138,16 +138,6 @@ header {
 .crear-btn:hover {
   background-color: #e6e6e6;
 }
-
-/*.crear-btn span {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.crear-btn p {
-  margin: 0;
-  font-size: 14px;
-}*/
 
 .notifications-account {
   display: flex;
@@ -226,7 +216,7 @@ aside {
 }
 
 .sidebar {
-  /width: 240px;*/
+  /*width: 240px;*/
   height: 100vh;            /* Ocupa toda la altura de la ventana */
   overflow-y: auto;         /* Permite scroll vertical */
   background-color: #fff;
@@ -267,30 +257,14 @@ aside li {
 /******************************/
 /*** Videos de contenido  *****/
 /******************************/
-/*.container {
+.container {
   display: flex;
-  margin-left: 240px; /* deja espacio para el sidebar 
-  margin-top: 80px; /* si hay header 
-  overflow: hidden;
-}*/
-
-/*.container {
-  display: flex;
- height: calc(100vh - 65px); /* resta el header 
-  margin-top: 80px; /* espacio para el header fijo 
-  overflow: hidden;
-  margin-bottom: 2px;
 }
 
-/*.container {
-  display: flex;
-  margin-bottom: 2px;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-}*/
-
-
+main {
+  flex: 1;
+  margin-left: 90px; /* ancho de tu aside */
+}
 
 .main-content {
   flex: 1;
@@ -302,22 +276,29 @@ aside li {
 }
 
 .video-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto; /* o el ancho de tu sidebar */
   gap: 20px;
+  padding: 20px;
 }
 
 .video-card {
-  width: 300px;
-  background: white;
+  background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
 }
 
 .thumbnail {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .video-info {
@@ -326,22 +307,33 @@ aside li {
 
 .channel-info {
   display: flex;
+  align-items: flex-start;
   gap: 10px;
-  align-items: center;
 }
 
 .subscriber-logo {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 
-.text-info {
-  flex: 1;
+.text-info h3 {
+  font-size: 14px;
+  margin: 0;
 }
 
+.text-info p {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0;
+}
 
-
-
-
-
+.live {
+  display: inline-block;
+ /* background-color: red;*/
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
